@@ -11,9 +11,8 @@
 - [File::HomeDir](http://search.cpan.org/perldoc?File::HomeDir) 1.00
 - [List::Util](http://search.cpan.org/perldoc?List::Util) 1.25
 - [List::MoreUtils](http://search.cpan.org/perldoc?List::MoreUtils) 0.33
-- [Mojolicious](http://search.cpan.org/perldoc?Mojolicious) 3.70
+- [Mojolicious](http://search.cpan.org/perldoc?Mojolicious) 4.0
 - [Moose](http://search.cpan.org/perldoc?Moose) 2.0604
-- [MooseX::App](http://search.cpan.org/perldoc?MooseX::App) 1.09
 - [MooseX::ClassAttribute](http://search.cpan.org/perldoc?MooseX::ClassAttribute) 0.26
 - [MooseX::Types::Path::Class](http://search.cpan.org/perldoc?MooseX::Types::Path::Class) 0.06
 - [MooseX::Types::Structured](http://search.cpan.org/perldoc?MooseX::Types::Structured) 0.28
