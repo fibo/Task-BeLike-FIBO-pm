@@ -55,15 +55,11 @@ L<List::MoreUtils> 0.33
 
 =item *
 
-L<Mojolicious> 3.70
+L<Mojolicious> 4.0
 
 =item *
 
 L<Moose> 2.0604
-
-=item *
-
-L<MooseX::App> 1.09
 
 =item *
 
