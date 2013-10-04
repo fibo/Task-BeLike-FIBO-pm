@@ -67,6 +67,10 @@ L<MooseX::ClassAttribute> 0.26
 
 =item *
 
+L<MooseX::ConfigFromFile> 0.12
+
+=item *
+
 L<MooseX::Types::Path::Class> 0.06
 
 =item *
