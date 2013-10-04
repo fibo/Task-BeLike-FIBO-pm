@@ -14,6 +14,7 @@
 - [Mojolicious](http://search.cpan.org/perldoc?Mojolicious) 4.0
 - [Moose](http://search.cpan.org/perldoc?Moose) 2.0604
 - [MooseX::ClassAttribute](http://search.cpan.org/perldoc?MooseX::ClassAttribute) 0.26
+- [MooseX::ConfigFromFile](http://search.cpan.org/perldoc?MooseX::ConfigFromFile) 0.12
 - [MooseX::Types::Path::Class](http://search.cpan.org/perldoc?MooseX::Types::Path::Class) 0.06
 - [MooseX::Types::Structured](http://search.cpan.org/perldoc?MooseX::Types::Structured) 0.28
 - [Perl::Tidy](http://search.cpan.org/perldoc?Perl::Tidy) 20121207
