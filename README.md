@@ -1,28 +1,7 @@
-# STUFF INCLUDED
+Task::BeLike::FIBO
+==================
 
-- [App::cpanminus](http://search.cpan.org/perldoc?App::cpanminus) 1.5019
-- [boolean](http://search.cpan.org/perldoc?boolean) 0.28
-- [CPAN](http://search.cpan.org/perldoc?CPAN) 2.00
-- [DBI](http://search.cpan.org/perldoc?DBI) 1.623
-- [DBIx::Class](http://search.cpan.org/perldoc?DBIx::Class) 0.08200
-- [DBIx::Class::Schema::Loader](http://search.cpan.org/perldoc?DBIx::Class::Schema::Loader) 0.07033
-- [Dist::Zilla](http://search.cpan.org/perldoc?Dist::Zilla) 4.300028
-- [Dist::Zilla::MintingProfile::Author::FIBO](http://search.cpan.org/perldoc?Dist::Zilla::MintingProfile::Author::FIBO) 20130507
-- [File::HomeDir](http://search.cpan.org/perldoc?File::HomeDir) 1.00
-- [List::Util](http://search.cpan.org/perldoc?List::Util) 1.25
-- [List::MoreUtils](http://search.cpan.org/perldoc?List::MoreUtils) 0.33
-- [Mojolicious](http://search.cpan.org/perldoc?Mojolicious) 4.0
-- [Moose](http://search.cpan.org/perldoc?Moose) 2.0604
-- [MooseX::ClassAttribute](http://search.cpan.org/perldoc?MooseX::ClassAttribute) 0.26
-- [MooseX::ConfigFromFile](http://search.cpan.org/perldoc?MooseX::ConfigFromFile) 0.12
-- [MooseX::Types::Path::Class](http://search.cpan.org/perldoc?MooseX::Types::Path::Class) 0.06
-- [MooseX::Types::Structured](http://search.cpan.org/perldoc?MooseX::Types::Structured) 0.28
-- [Perl::Tidy](http://search.cpan.org/perldoc?Perl::Tidy) 20121207
-- [Perl::Critic](http://search.cpan.org/perldoc?Perl::Critic) 1.118
-- [Perl::Critic::Bangs](http://search.cpan.org/perldoc?Perl::Critic::Bangs) 1.10
-- [Path::Class](http://search.cpan.org/perldoc?Path::Class) 0.29
-- [Scalar::Util](http://search.cpan.org/perldoc?Scalar::Util) 1.25
-- [Test::More](http://search.cpan.org/perldoc?Test::More) 0.98
-- [Test::use::ok](http://search.cpan.org/perldoc?Test::use::ok) 0.11
-- [Throwable::Error](http://search.cpan.org/perldoc?Throwable::Error) 0.102080
-- [YAML](http://search.cpan.org/perldoc?YAML) 0.84
+[![Build Status](https://travis-ci.org/fibo/Task-BeLike-Fibo-pm.svg)](https://travis-ci.org/fibo/Task-BeLike-FIBO-pm)
+
+See [online docs](https://metacpan.org/pod/Task::BeLike::FIBO)
+
