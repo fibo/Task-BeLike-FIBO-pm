@@ -7,9 +7,9 @@ Task::BeLike::FIBO -- Leonardo Pisano a.k.a. Fibonacci
 
 =over 4
 
-=item *
+=item L<CPAN>
 
-L<CPAN>
+See how to setup L<A CPAN client that works like a charm|http://blog.g14n.info/2014/03/a-cpan-client-that-works-like-charm.html>.
 
 =item *
 
@@ -22,6 +22,10 @@ L<Moose>
 =item *
 
 L<Perl::Tidy>
+
+Use L<Perl::Tidy> defaults to indent occasionally. Do not indent every source file automatically, indent by hand and use your creativity.
+
+See Perl section in L<My Vim preferences|http://blog.g14n.info/2013/07/my-vim-configuration.html#perl> to see how you can use L<Perl::Tidy> with Vim.
 
 =item *
 
