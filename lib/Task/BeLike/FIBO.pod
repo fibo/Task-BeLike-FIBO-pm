@@ -3,11 +3,121 @@
 
 Task::BeLike::FIBO -- Leonardo Pisano a.k.a. Fibonacci
 
+=head1 PACKAGE GUIDELINES
+
+Do not get crazy with automatic generators. I am a mathematician and a coder, not a corporation.
+Every package is different and has different needings. The followings are samples for files I usually need in a package.
+Just use copy and paste and your brain!
+
+The smack a L<DRY | http://en.wikipedia.org/wiki/Don't_repeat_yourself> L<KISS | http://en.wikipedia.org/wiki/KISS_principle> is not that bad.
+
+=head2 WORKFLOW
+
+=over 4
+
+=item *
+
+Run tests
+
+    prove -l --state=save,failed
+
+=item *
+
+Create package
+
+    perl Makefile.PL
+    make
+    make test
+    make manifest
+    make dist
+    make realclean
+
+=item *
+
+Upload to PAUSE
+
+Do it by hand. Yes, using your browser ... and remember to delete old files.
+
+=back
+
+=head2 FILES
+
+=over 4
+
+=item *
+
+.travis.yml
+
+    language: perl
+    perl:
+      - "5.20"
+      - "5.18"
+      - "5.16"
+      - "5.14"
+      - "5.12"
+      - "5.10"
+      - "5.8"
+
+=item *
+
+.gitignore
+
+    blib/
+    Makefile
+    Makefile.old
+    MANIFEST.bak
+    META.yml
+    MYMETA.yml
+    pm_to_blib
+    .prove
+    *.tar.gz
+
+=item *
+
+Makefile.PL
+
+    use strict;
+    use warnings;
+
+    use ExtUtils::MakeMaker 6.64;
+
+    WriteMakefile(
+        ABSTRACT_FROM => 'lib/My/Package.pm',
+        VERSION_FROM  => 'lib/My/Package.pm',
+        AUTHOR        => 'G. Casati <fibo@cpan.org>',
+        NAME          => 'My-Package',
+        PREREQ_PM     => {
+            # 'Some::Package' => '0',
+            # 'Other::Package' => '1.2.3',
+        },
+        test          => { TESTS => 't/*.t' },
+        TEST_REQUIRES => {
+            'Test::More' => '1',
+            'Test::Pod'  => '1',
+        },
+    );
+
+=item *
+
+MANIFEST.SKIP
+
+    ^\.(?!prove)
+    .*\.old$
+    \.tar\.gz$
+    ^Makefile$
+    ^MYMETA\.
+    ^blib
+    ^pm_to_blib
+
+=back
+
 =head1 STUFF INCLUDED
 
 =over 4
 
-=item L<CPAN>
+=item *
+
+L<CPAN>
 
 See how to setup L<A CPAN client that works like a charm|http://blog.g14n.info/2014/03/a-cpan-client-that-works-like-charm.html>.
 
