@@ -3,6 +3,11 @@
 
 Task::BeLike::FIBO -- Leonardo Pisano a.k.a. Fibonacci
 
+=head1 SYNOPSIS
+
+    cpan Task::BeLike::FIBO
+    perldoc Task::BeLike::FIBO
+
 =head1 PACKAGE GUIDELINES
 
 Do not get crazy with automatic generators. I am a mathematician and a coder, not a corporation.
@@ -46,11 +51,21 @@ Do it by hand. Yes, using your browser ... and remember to delete old files.
 
 =item *
 
+README.md
+
+    My-Package
+    ==========
+
+    [![Build Status](https://travis-ci.org/fibo/My-Package-pm.svg)](https://travis-ci.org/fibo/My/Package-pm)
+
+    See [online docs](https://metacpan.org/pod/My::Package)
+
+=item *
+
 .travis.yml
 
     language: perl
     perl:
-      - "5.20"
       - "5.18"
       - "5.16"
       - "5.14"
@@ -81,11 +96,19 @@ Makefile.PL
 
     use ExtUtils::MakeMaker 6.64;
 
+    my $name = 'My-Package';
+
     WriteMakefile(
         ABSTRACT_FROM => 'lib/My/Package.pm',
         VERSION_FROM  => 'lib/My/Package.pm',
         AUTHOR        => 'G. Casati <fibo@cpan.org>',
         NAME          => 'My-Package',
+        META_MERGE   => {
+          resources => {
+            license     => 'http://fibo.mit-license.org/',
+            repository  => 'http://github.com/fibo/' . $name . '-pm',
+            bugtracker  => 'http://github.com/fibo/' . $name . '-pm/issues',
+        },
         PREREQ_PM     => {
             # 'Some::Package' => '0',
             # 'Other::Package' => '1.2.3',
@@ -123,11 +146,7 @@ See how to setup L<A CPAN client that works like a charm|http://blog.g14n.info/2
 
 =item *
 
-L<ExtUtils::MakeMaker>
-
-=item *
-
-L<Moose>
+L<ExtUtils::MakeMaker> version gt 6.96
 
 =item *
 
