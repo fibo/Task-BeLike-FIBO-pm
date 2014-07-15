@@ -12,9 +12,10 @@ Task::BeLike::FIBO -- Leonardo Pisano a.k.a. Fibonacci
 
 Do not get crazy with automatic generators. I am a mathematician and a coder, not a corporation.
 Every package is different and has different needings. The followings are samples for files I usually need in a package.
+
 Just use copy and paste and your brain!
 
-The smack a L<DRY | http://en.wikipedia.org/wiki/Don't_repeat_yourself> L<KISS | http://en.wikipedia.org/wiki/KISS_principle> is not that bad.
+The smack of a L<DRY | http://en.wikipedia.org/wiki/Don't_repeat_yourself> L<KISS | http://en.wikipedia.org/wiki/KISS_principle> is not that bad.
 
 =head2 WORKFLOW
 
@@ -22,13 +23,29 @@ The smack a L<DRY | http://en.wikipedia.org/wiki/Don't_repeat_yourself> L<KISS |
 
 =item *
 
+Start a feature branch
+
+    git checkout -b somefeature
+
+=item *
+
+Write documentation about new feature. Then write tests to check it and code to implement it.
+
+=item *
+
 Run tests
+
+    prove -l --state=save
+
+=item *
+
+If some test does not pass, fix code and run tests that failed
 
     prove -l --state=save,failed
 
 =item *
 
-Create package
+Create new version package
 
     perl Makefile.PL
     make
@@ -39,9 +56,9 @@ Create package
 
 =item *
 
-Upload to PAUSE
+Upload to L<PAUSE | http://pause.perl.org/>
 
-Do it by hand. Yes, using your browser ... and remember to delete old files.
+Just do it manually! Yes, using your browser ... and remember to delete old files.
 
 =back
 
@@ -102,9 +119,10 @@ Makefile.PL
         ABSTRACT_FROM => 'lib/My/Package.pm',
         VERSION_FROM  => 'lib/My/Package.pm',
         AUTHOR        => 'G. Casati <fibo@cpan.org>',
-        NAME          => 'My-Package',
+        NAME          => $name,
         META_MERGE   => {
           resources => {
+            homepage    => 'https://metacpan.org/pod/My::Package'
             license     => 'http://fibo.mit-license.org/',
             repository  => 'http://github.com/fibo/' . $name . '-pm',
             bugtracker  => 'http://github.com/fibo/' . $name . '-pm/issues',
