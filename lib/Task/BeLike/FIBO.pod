@@ -1,4 +1,6 @@
 
+=encoding utf8
+
 =head1 NAME
 
 Task::BeLike::FIBO -- Leonardo Pisano a.k.a. Fibonacci
@@ -7,6 +9,12 @@ Task::BeLike::FIBO -- Leonardo Pisano a.k.a. Fibonacci
 
     cpan Task::BeLike::FIBO
     perldoc Task::BeLike::FIBO
+
+=head1 DESCRIPTION
+
+Hi! I am an italian mathematician. I graduated in 2005 at L<Università degli Studi di Genova | http://www.dima.unige.it/> and since then I work doing Business Intelligence. My boss said: you need Perl. So I started using this language. I like many programming languages, but, Perl really help me to pay my rent.
+
+This is a primary about my habits when I write Perl code.
 
 =head1 PACKAGE GUIDELINES
 
@@ -42,6 +50,14 @@ Run tests
 If some test does not pass, fix code and run tests that failed
 
     prove -l --state=save,failed
+
+=item *
+
+Merge feature branch and commit work
+
+    git checkout master
+    git merge somefeature
+    git push
 
 =item *
 
@@ -94,14 +110,17 @@ README.md
 
 .gitignore
 
-    blib/
-    Makefile
-    Makefile.old
-    MANIFEST.bak
-    META.yml
-    MYMETA.yml
+    .*
+    *~
+    !.gitignore
+    !.travis.yml
+    blib
     pm_to_blib
-    .prove
+    Makefile*
+    !Makefile.PL
+    MANIFEST*
+    !MANIFEST.SKIP
+    *META.*
     *.tar.gz
 
 =item *
@@ -113,25 +132,23 @@ Makefile.PL
 
     use ExtUtils::MakeMaker 6.64;
 
-    my $name = 'My-Package';
-
     WriteMakefile(
         ABSTRACT_FROM => 'lib/My/Package.pm',
         VERSION_FROM  => 'lib/My/Package.pm',
         AUTHOR        => 'G. Casati <fibo@cpan.org>',
-        NAME          => $name,
-        META_MERGE   => {
+        NAME          => 'My-Package',
+        META_MERGE => {
           resources => {
-            homepage    => 'https://metacpan.org/pod/My::Package'
-            license     => 'http://fibo.mit-license.org/',
-            repository  => 'http://github.com/fibo/' . $name . '-pm',
-            bugtracker  => 'http://github.com/fibo/' . $name . '-pm/issues',
+            homepage   => 'https://metacpan.org/pod/My::Package'
+            license    => 'http://fibo.mit-license.org/',
+            repository => 'http://github.com/fibo/My-Package-pm',
+            bugtracker => 'http://github.com/fibo/My-Package-pm/issues',
         },
-        PREREQ_PM     => {
+        PREREQ_PM => {
             # 'Some::Package' => '0',
             # 'Other::Package' => '1.2.3',
         },
-        test          => { TESTS => 't/*.t' },
+        test => { TESTS => 't/*.t' },
         TEST_REQUIRES => {
             'Test::More' => '1',
             'Test::Pod'  => '1',
@@ -142,7 +159,7 @@ Makefile.PL
 
 MANIFEST.SKIP
 
-    ^\.(?!prove)
+    ^\.
     .*\.old$
     \.tar\.gz$
     ^Makefile$
@@ -164,7 +181,7 @@ See how to setup L<A CPAN client that works like a charm|http://blog.g14n.info/2
 
 =item *
 
-L<ExtUtils::MakeMaker> version gt 6.96
+L<ExtUtils::MakeMaker> version gt 6.96, cause I use the C<TEST_REQUIRES> option.
 
 =item *
 
@@ -178,6 +195,19 @@ See Perl section in L<My Vim preferences|http://blog.g14n.info/2013/07/my-vim-co
 
 L<Test::Compile>
 
+Create a C<t/_compile.t> file
+
+    use strict;
+    use warnings;
+    use Test::More;
+    
+    eval "use Test::Compile";
+    Test::More->builder->BAIL_OUT(<<EOF) if $@;
+    Test::Compile required for testing compilation
+    EOF
+
+    all_pm_files_ok();
+
 =item *
 
 L<Test::More>
@@ -185,6 +215,19 @@ L<Test::More>
 =item *
 
 L<Test::Pod>
+
+Create a C<t/_pod.t> file
+
+    use strict;
+    use warnings;
+    use Test::More;
+    
+    eval "use Test::Pod";
+    Test::More->builder->BAIL_OUT(<<EOF) if $@;
+    Test::Pod required for testing compilation
+    EOF
+    
+    all_pod_files_ok();
 
 =back
 
