@@ -13,6 +13,7 @@ WriteMakefile(
         license    => 'http://fibo.mit-license.org/',
         repository => 'http://github.com/fibo/Task-BeLike-FIBO-pm',
         bugtracker => 'http://github.com/fibo/Task-BeLike-FIBO-pm/issues'
+      },
     },
     PREREQ_PM     => {
         'CPAN'                => '2',
