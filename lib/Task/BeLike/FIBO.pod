@@ -25,6 +25,8 @@ Just use copy and paste and your brain!
 
 The smack of a L<DRY | http://en.wikipedia.org/wiki/Don't_repeat_yourself> L<KISS | http://en.wikipedia.org/wiki/KISS_principle> is not that bad.
 
+Learn from nature: stay as minimal as possible.
+
 =head2 WORKFLOW
 
 =over 4
@@ -55,6 +57,7 @@ If some test does not pass, fix code and run tests that failed
 
 Merge feature branch and commit work
 
+    git rebase master
     git checkout master
     git merge somefeature
     git push
@@ -89,9 +92,14 @@ README.md
     My-Package
     ==========
 
-    [![Build Status](https://travis-ci.org/fibo/My-Package-pm.svg)](https://travis-ci.org/fibo/My/Package-pm)
+    My-Package description ...
 
     See [online docs](https://metacpan.org/pod/My::Package)
+
+    --------
+    [![Build Status](https://travis-ci.org/fibo/My-Package-pm.png?branch=master)](https://travis-ci.org/fibo/My-Package-pm)
+    [![Coverage Status](https://coveralls.io/repos/fibo/My-Package-pm/badge.png?branch=master)](https://coveralls.io/r/fibo/My-Package-pm?branch=master)
+    [![CPAN version](https://badge.fury.io/pl/My-Package-pm.svg)](https://metacpan.org/pod/My::Package)
 
 =item *
 
