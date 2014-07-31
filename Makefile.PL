@@ -10,6 +10,7 @@ WriteMakefile(
     NAME          => 'Task-BeLike-FIBO',
     META_MERGE => {
       resources => {
+        homepage   => 'https://metacpan.org/pod/Task::BeLike::FIBO',
         license    => 'http://fibo.mit-license.org/',
         repository => 'http://github.com/fibo/Task-BeLike-FIBO-pm',
         bugtracker => 'http://github.com/fibo/Task-BeLike-FIBO-pm/issues'
