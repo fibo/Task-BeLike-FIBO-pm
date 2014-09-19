@@ -64,7 +64,9 @@ Merge feature branch and commit work
 
 =item *
 
-Create new version package
+Update version, use L<Semantic Versioning | http://semver.org/>.
+
+Create a new release
 
     perl Makefile.PL
     make
