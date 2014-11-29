@@ -1,3 +1,8 @@
+package Task::BeLike::FIBO;
+use strict;
+use warnings;
+our $VERSION = '0.8';
+1;
 
 =encoding utf8
 
@@ -27,65 +32,9 @@ The smack of a L<DRY|http://en.wikipedia.org/wiki/Don't_repeat_yourself> L<KISS|
 
 Learn from nature: stay as minimal as possible.
 
-=head2 WORKFLOW
-
-=over 4
-
-=item *
-
-Start a feature branch
-
-    git checkout -b somefeature
-
-=item *
-
-Write documentation about new feature. Then write tests to check it and code to implement it.
-
-=item *
-
-Run tests
-
-    prove -l --state=save
-
-=item *
-
-If some test does not pass, fix code and run tests that failed
-
-    prove -l --state=save,failed
-
-=item *
-
-Merge feature branch and commit work
-
-    git rebase master
-    git checkout master
-    git merge somefeature
-    git push
-
-=item *
-
-Update version, use L<Semantic Versioning|http://semver.org/>.
-
-Create a new release
-
-    perl Makefile.PL
-    make
-    make test
-    make manifest
-    make dist
-    make realclean
-
-=item *
-
-Upload to L<PAUSE|http://pause.perl.org/>
-
-Just do it manually! Yes, using your browser ... and remember to delete old files.
-
-=back
-
 =head2 FILES
 
-Follows a list of sample files it is worth to add to a package.
+Follows a list of sample files of a package, C<MY::Package> for instance.
 
 =over 4
 
@@ -155,7 +104,7 @@ Makefile.PL
         ABSTRACT_FROM => 'lib/My/Package.pm',
         VERSION_FROM  => 'lib/My/Package.pm',
         AUTHOR        => 'G. Casati <fibo@cpan.org>',
-        NAME          => 'My-Package',
+        NAME          => 'My::Package',
         META_MERGE => {
           resources => {
             homepage   => 'https://metacpan.org/pod/My::Package'
@@ -172,7 +121,7 @@ Makefile.PL
             'Test::Compile' => '1',
             'Test::More' => '1',
             'Test::Pod'  => '1',
-        },
+        }
     );
 
 =item *
@@ -192,6 +141,66 @@ MANIFEST.SKIP
 
 =back
 
+=head2 WORKFLOW
+
+=over 4
+
+=item *
+
+Start a feature branch
+
+    $ git checkout -b somefeature
+
+=item *
+
+Write documentation about new feature. Then write tests to check it and code to implement it.
+
+=item *
+
+Run tests
+
+    $ prove -l --state=save
+
+=item *
+
+If some test does not pass, fix code and run tests that failed
+
+    $ prove -l --state=save,failed
+
+=item *
+
+Merge feature branch and commit work
+
+    $ git rebase master
+    $ git checkout master
+    $ git merge somefeature
+    $ git push
+
+=item *
+
+Update version, use L<Semantic Versioning|http://semver.org/>.
+
+Create a new release
+
+    $ perl Makefile.PL
+    $ make
+    $ make test
+    $ make manifest
+    $ make dist
+    $ make realclean
+
+=item *
+
+Upload to L<PAUSE|http://pause.perl.org/>
+
+    $ cpan-upload -u fibo My-Package-0.1.tar.gz
+    PAUSE Password:
+    registering upload with PAUSE web server
+    POSTing upload for My-Package-0.1.tar.gz to https://pause.perl.org/pause/authenquery
+    PAUSE add message sent ok [200]
+
+=back
+
 =head1 STUFF INCLUDED
 
 =over 4
@@ -201,6 +210,10 @@ MANIFEST.SKIP
 L<CPAN>
 
 See how to setup L<A CPAN client that works like a charm|http://g14n.info/2014/03/a-cpan-client-that-works-like-charm>.
+
+=item *
+
+L<CPAN::Uploader> to release modules using a cli. It also depends on L<LWP::Protocol::https> which depends on L<IO::Socket::SSL> which I think L<should be a core module|http://blogs.perl.org/users/chris_fedde/2013/03/how-do-we-know-when-a-module-is-depricated.html#comment-1460139>.
 
 =item *
 
