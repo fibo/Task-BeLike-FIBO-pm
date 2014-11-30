@@ -34,7 +34,7 @@ Learn from nature: stay as minimal as possible.
 
 =head2 FILES
 
-Follows a list of sample files of a package, C<MY::Package> for instance.
+Follows a list of sample files of a package, named C<MY::Package> for instance: GitHub repo name hence is C<My-Package-pm>.
 
 =over 4
 
@@ -57,7 +57,7 @@ README.md
     For more information point your browser to [online docs](https://metacpan.org/pod/My::Package)
 
     --------
-    [![CPAN version](https://badge.fury.io/pl/My-Package-pm.svg)](https://metacpan.org/pod/My::Package)
+    [![CPAN version](https://badge.fury.io/pl/My-Package.svg)](https://metacpan.org/pod/My::Package)
     [![Build Status](https://travis-ci.org/fibo/My-Package-pm.png?branch=master)](https://travis-ci.org/fibo/My-Package-pm)
     [![Coverage Status](https://coveralls.io/repos/fibo/My-Package-pm/badge.png?branch=master)](https://coveralls.io/r/fibo/My-Package-pm?branch=master)
 
