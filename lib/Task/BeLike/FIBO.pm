@@ -1,8 +1,8 @@
 package Task::BeLike::FIBO;
-use strict;
-use warnings;
-our $VERSION = '0.8';
+$VERSION = '0.8';
 1;
+
+__END__
 
 =encoding utf8
 
@@ -37,6 +37,36 @@ Learn from nature: stay as minimal as possible.
 Follows a list of sample files of a package, named C<MY::Package> for instance: GitHub repo name hence is C<My-Package-pm>.
 
 =over 4
+
+=item *
+
+lib/My/Package.pm
+
+This is the main file of the package and looks something like this
+
+    package Task::BeLike::FIBO;
+    $VERSION = '0.1';
+    1;
+
+    __END__
+
+    =encoding utf8
+
+    =head1 NAME
+
+    My::Package -- is yet another Perl package
+
+    =head1 SYNOPSIS
+
+    =head1 DESCRIPTION
+
+    =head1 COPYRIGHT AND LICENSE
+
+    This software is copyright (c) 2014 by G. Casati.
+
+    This is free software; you can redistribute it and/or modify it under the same terms as the Perl 5 programming language system itself.
+
+    =cut
 
 =item *
 
@@ -105,10 +135,11 @@ Makefile.PL
         VERSION_FROM  => 'lib/My/Package.pm',
         AUTHOR        => 'G. Casati <fibo@cpan.org>',
         NAME          => 'My::Package',
+       MIN_PERL_VERSION => '5.8.0',
         META_MERGE => {
           resources => {
             homepage   => 'https://metacpan.org/pod/My::Package'
-            license    => 'http://g14n.info/mit-license',
+            license    => 'http://dev.perl.org/licenses/artistic.html',
             repository => 'http://github.com/fibo/My-Package-pm',
             bugtracker => 'http://github.com/fibo/My-Package-pm/issues',
         },
@@ -138,6 +169,15 @@ MANIFEST.SKIP
     ^MYMETA\.
     ^blib
     ^pm_to_blib
+
+=item *
+
+Changes
+
+It is considered a good habit to keep track of at least major changes to inform users what they should expect when upgrading version.
+
+    2014-12-2 v0.1
+    + First release
 
 =back
 
@@ -266,6 +306,12 @@ Create a C<t/_pod.t> file
     all_pod_files_ok();
 
 =back
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2014 by G. Casati.
+
+This is free software; you can redistribute it and/or modify it under the same terms as the Perl 5 programming language system itself.
 
 =cut
 
