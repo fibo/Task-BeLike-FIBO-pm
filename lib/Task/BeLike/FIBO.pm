@@ -1,5 +1,5 @@
 package Task::BeLike::FIBO;
-$VERSION = '0.8';
+$VERSION = '0.9';
 1;
 
 __END__
@@ -55,8 +55,6 @@ This is the main file of the package and looks something like this
     =head1 NAME
 
     My::Package -- is yet another Perl package
-
-    =head1 SYNOPSIS
 
     =head1 DESCRIPTION
 
@@ -135,13 +133,14 @@ Makefile.PL
         VERSION_FROM  => 'lib/My/Package.pm',
         AUTHOR        => 'G. Casati <fibo@cpan.org>',
         NAME          => 'My::Package',
-       MIN_PERL_VERSION => '5.8.0',
+        MIN_PERL_VERSION => '5.8.0',
         META_MERGE => {
-          resources => {
-            homepage   => 'https://metacpan.org/pod/My::Package'
-            license    => 'http://dev.perl.org/licenses/artistic.html',
-            repository => 'http://github.com/fibo/My-Package-pm',
-            bugtracker => 'http://github.com/fibo/My-Package-pm/issues',
+            resources => {
+                homepage   => 'https://metacpan.org/pod/My::Package'
+                license    => 'http://g14n.info/artistic-license',
+                repository => 'http://github.com/fibo/My-Package-pm',
+                bugtracker => 'http://github.com/fibo/My-Package-pm/issues',
+            },
         },
         PREREQ_PM => {
             # 'Some::Package' => '0',

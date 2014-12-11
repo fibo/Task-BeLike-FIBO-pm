@@ -12,7 +12,7 @@ WriteMakefile(
     META_MERGE       => {
         resources => {
             homepage   => 'https://metacpan.org/pod/Task::BeLike::FIBO',
-            license    => 'http://dev.perl.org/licenses/artistic.html',
+            license    => 'http://g14n.info/artistic-license',
             repository => 'https://github.com/fibo/Task-BeLike-FIBO-pm',
             bugtracker => 'https://github.com/fibo/Task-BeLike-FIBO-pm/issues'
         },
