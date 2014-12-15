@@ -82,7 +82,7 @@ README.md
         make test
         make install
 
-    For more information point your browser to [online docs](https://metacpan.org/pod/My::Package)
+    For more information point your browser to [online docs](https://metacpan.org/pod/My::Package).
 
     --------
     [![CPAN version](https://badge.fury.io/pl/My-Package.svg)](https://metacpan.org/pod/My::Package)
@@ -138,8 +138,8 @@ Makefile.PL
             resources => {
                 homepage   => 'https://metacpan.org/pod/My::Package'
                 license    => 'http://g14n.info/artistic-license',
-                repository => 'http://github.com/fibo/My-Package-pm',
-                bugtracker => 'http://github.com/fibo/My-Package-pm/issues',
+                repository => 'https://github.com/fibo/My-Package-pm',
+                bugtracker => 'https://github.com/fibo/My-Package-pm/issues',
             },
         },
         PREREQ_PM => {
