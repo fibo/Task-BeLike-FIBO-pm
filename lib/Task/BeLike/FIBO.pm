@@ -10,6 +10,12 @@ __END__
 
 Task::BeLike::FIBO -- Leonardo Pisano a.k.a. Fibonacci
 
+=begin HTML
+
+<p><a href="https://metacpan.org/pod/Task::BeLike::FIBO" target="_blank"><img src="https://badge.fury.io/pl/Task-BeLike-FIBO.svg" alt="CPAN version"></a> <a href="https://travis-ci.org/fibo/Task-BeLike-FIBO-pm" target="_blank"><img src="https://travis-ci.org/fibo/Task-BeLike-FIBO-pm.svg?branch=master" alt="Build Status"></a></p>
+
+=end HTML
+
 =head1 SYNOPSIS
 
     cpan Task::BeLike::FIBO
@@ -56,6 +62,12 @@ This is the main file of the package and looks something like this
 
     My::Package -- is yet another Perl package
 
+    =begin HTML
+
+    <p><a href="https://metacpan.org/pod/TaskMy::Packagerget="_blank"><img src="https://badge.fury.io/pl/TaskMy-Package" alt="CPAN version"></a> <a href="https://travis-ci.org/fibo/TaskMy-Package target="_blank"><img src="https://travis-ci.org/fibo/TaskMy-Packagesvg?branch=master" alt="Build Status"></a></p>
+
+    =end HTML
+
     =head1 DESCRIPTION
 
     =head1 COPYRIGHT AND LICENSE
@@ -87,9 +99,7 @@ README.md
     --------
     [![CPAN version](https://badge.fury.io/pl/My-Package.svg)](https://metacpan.org/pod/My::Package)
     [![Build Status](https://travis-ci.org/fibo/My-Package-pm.png?branch=master)](https://travis-ci.org/fibo/My-Package-pm)
-    [![Coverage Status](https://coveralls.io/repos/fibo/My-Package-pm/badge.png?branch=master)](https://coveralls.io/r/fibo/My-Package-pm?branch=master)
-
-=item *
+    [![C
 
 .travis.yml
 
@@ -276,7 +286,8 @@ Create a C<t/_compile.t> file
     use warnings;
     use Test::More;
     
-    eval "use Test::Compile";
+   
+    e Test::Compile";
     Test::More->builder->BAIL_OUT(<<EOF) if $@;
     Test::Compile required for testing compilation
     EOF
@@ -297,12 +308,14 @@ Create a C<t/_pod.t> file
     use warnings;
     use Test::More;
     
-    eval "use Test::Pod";
+    eva
+    st::Pod";
     Test::More->builder->BAIL_OUT(<<EOF) if $@;
     Test::Pod required for testing compilation
     EOF
     
-    all_pod_files_ok();
+    all_pod
+    ();
 
 =back
 
