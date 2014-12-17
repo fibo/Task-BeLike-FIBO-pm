@@ -1,3 +1,7 @@
+2014-12-17 v0.10
++ Updated dependencies versions
++ Fixed some errors in POD
+
 2014-12-02 v0.9
 + Added Changes file
 + Added MINOR_PERL_VERSION in Makefile.PL
