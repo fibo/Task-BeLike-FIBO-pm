@@ -1,5 +1,5 @@
 package Task::BeLike::FIBO;
-$VERSION = '0.9';
+$VERSION = '0.10';
 1;
 
 __END__
@@ -10,12 +10,6 @@ __END__
 
 Task::BeLike::FIBO -- Leonardo Pisano a.k.a. Fibonacci
 
-=begin HTML
-
-<p><a href="https://metacpan.org/pod/Task::BeLike::FIBO" target="_blank"><img src="https://badge.fury.io/pl/Task-BeLike-FIBO.svg" alt="CPAN version"></a> <a href="https://travis-ci.org/fibo/Task-BeLike-FIBO-pm" target="_blank"><img src="https://travis-ci.org/fibo/Task-BeLike-FIBO-pm.svg?branch=master" alt="Build Status"></a></p>
-
-=end HTML
-
 =head1 SYNOPSIS
 
     cpan Task::BeLike::FIBO
@@ -23,14 +17,14 @@ Task::BeLike::FIBO -- Leonardo Pisano a.k.a. Fibonacci
 
 =head1 DESCRIPTION
 
-Hi! I am L<FIBO|https://metacpan.org/author/FIBO> an italian mathematician. I graduated in 2005 at L<Università degli Studi di Genova|http://www.dima.unige.it/> and since then I work doing Business Intelligence and Web Analytics. My boss said: you need Perl. So I started using this language. I like many programming languages, but, Perl really help me to pay my rent.
+Hi! I am L<FIBO|https://metacpan.org/author/FIBO>, an italian mathematician. I graduated in 2005 at L<Università degli Studi di Genova|http://www.dima.unige.it/> and since then I work doing Business Intelligence and Web Analytics. My boss said: you need Perl. So I started using this language. I like many programming languages, but, Perl really help me to pay my rent.
 
 This is a primary about my habits and a collection of modules I use when I write Perl code.
 
 =head1 PACKAGE GUIDELINES
 
 Do not get crazy with automatic generators. I am a mathematician and a coder, not a corporation.
-Every package is different and has different needings. The followings are samples for files I usually need in a package.
+Every package is different and has different needings.
 
 Just use copy and paste and your brain!
 
@@ -40,7 +34,9 @@ Learn from nature: stay as minimal as possible.
 
 =head2 FILES
 
-Follows a list of sample files of a package, named C<MY::Package> for instance: GitHub repo name hence is C<My-Package-pm>.
+Follows a list of sample files I usually include in a package, C<MY::Package> for instance.
+
+I use to create a GitHub repo named C<My-Package-pm>.
 
 =over 4
 
@@ -50,7 +46,7 @@ lib/My/Package.pm
 
 This is the main file of the package and looks something like this
 
-    package Task::BeLike::FIBO;
+    package My::Package;
     $VERSION = '0.1';
     1;
 
@@ -62,11 +58,7 @@ This is the main file of the package and looks something like this
 
     My::Package -- is yet another Perl package
 
-    =begin HTML
-
-    <p><a href="https://metacpan.org/pod/TaskMy::Packagerget="_blank"><img src="https://badge.fury.io/pl/TaskMy-Package" alt="CPAN version"></a> <a href="https://travis-ci.org/fibo/TaskMy-Package target="_blank"><img src="https://travis-ci.org/fibo/TaskMy-Packagesvg?branch=master" alt="Build Status"></a></p>
-
-    =end HTML
+    =head1 SYNOPSIS
 
     =head1 DESCRIPTION
 
@@ -99,7 +91,8 @@ README.md
     --------
     [![CPAN version](https://badge.fury.io/pl/My-Package.svg)](https://metacpan.org/pod/My::Package)
     [![Build Status](https://travis-ci.org/fibo/My-Package-pm.png?branch=master)](https://travis-ci.org/fibo/My-Package-pm)
-    [![C
+
+=item *
 
 .travis.yml
 
@@ -158,9 +151,9 @@ Makefile.PL
         },
         test => { TESTS => 't/*.t' },
         TEST_REQUIRES => {
-            'Test::Compile' => '1',
-            'Test::More' => '1',
-            'Test::Pod'  => '1',
+            'Test::Compile' => '1.2.1',
+            'Test::More'    => '1.001009',
+            'Test::Pod'     => '1.48'
         }
     );
 
@@ -285,14 +278,10 @@ Create a C<t/_compile.t> file
     use strict;
     use warnings;
     use Test::More;
-    
-   
-    e Test::Compile";
-    Test::More->builder->BAIL_OUT(<<EOF) if $@;
-    Test::Compile required for testing compilation
-    EOF
-
-    all_pm_files_ok();
+    eval "use Test::Compile";
+    plan skip_all => "Test::Compile required for testing compilation"
+      if $@;
+    all_pl_files_ok();
 
 =item *
 
@@ -307,15 +296,10 @@ Create a C<t/_pod.t> file
     use strict;
     use warnings;
     use Test::More;
-    
-    eva
-    st::Pod";
-    Test::More->builder->BAIL_OUT(<<EOF) if $@;
-    Test::Pod required for testing compilation
-    EOF
-    
-    all_pod
-    ();
+    eval "use Test::Pod";
+    plan skip_all => "Test::Pod required for testing POD"
+      if $@;
+    all_pod_files_ok();
 
 =back
 

@@ -18,19 +18,19 @@ WriteMakefile(
         },
     },
     PREREQ_PM => {
-        'CPAN'                => '2',
+        'CPAN'                => '2.05',
         'CPAN::Uploader'      => '0.103007',
         'ExtUtils::MakeMaker' => '6.64',
         'Perl::Tidy'          => '20140328',
-        'Test::Compile'       => '1',
-        'Test::More'          => '1',
-        'Test::Pod'           => '1'
+        'Test::Compile'       => '1.2.1',
+        'Test::More'          => '1.001009',
+        'Test::Pod'           => '1.48'
     },
     test          => { TESTS => 't/*.t' },
     TEST_REQUIRES => {
-        'Test::Compile' => '1',
-        'Test::More'    => '1',
-        'Test::Pod'     => '1',
+        'Test::Compile' => '1.2.1',
+        'Test::More'    => '1.001009',
+        'Test::Pod'     => '1.48'
     }
 );
 
