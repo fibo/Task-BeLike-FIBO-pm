@@ -1,5 +1,5 @@
 package Task::BeLike::FIBO;
-$VERSION = '0.10';
+$VERSION = '0.11';
 1;
 
 __END__
@@ -178,7 +178,7 @@ Changes
 
 It is considered a good habit to keep track of at least major changes to inform users what they should expect when upgrading version.
 
-    2014-12-2 v0.1
+    2014-12-02 v0.1
     + First release
 
 =back
@@ -220,7 +220,11 @@ Merge feature branch and commit work
 
 =item *
 
-Update version, use L<Semantic Versioning|http://semver.org/>.
+Update version, usually in file C<lib/My/Package.pm>.
+
+Use L<Semantic Versioning|http://semver.org/>.
+
+Check that C<Changes> file is updated with modifications.
 
 Create a new release
 
@@ -230,6 +234,11 @@ Create a new release
     $ make manifest
     $ make dist
     $ make realclean
+
+Create a git tag
+
+    $ git tag v0.1
+    $ git push
 
 =item *
 
