@@ -197,6 +197,17 @@ Makefile.PL
         }
     );
 
+A note about versions in C<PREREQ_PM>: keep in mind that when specifying a version for core modules, it should match the version shipped with Perl version C<MIN_PERL_VERSION>.
+
+The L<corelist> app is your friend.
+
+For example if I want to figure out which version of L<File::Path> I should require, if the lower Perl version I am supporting is C<5.8.0> I launch
+
+    $ corelist -a File::Path | grep v5.8.0
+      v5.8.0     1.05
+
+so I know I should go for C<1.05>.
+
 =item *
 
 MANIFEST.SKIP
