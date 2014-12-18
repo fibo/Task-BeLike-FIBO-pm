@@ -1,5 +1,9 @@
 package Task::BeLike::FIBO;
-$VERSION = '0.11';
+use strict;
+use warnings;
+
+our $VERSION = '0.11';
+
 1;
 
 __END__
@@ -57,7 +61,11 @@ lib/My/Package.pm
 This is the main file of the package and looks something like this
 
     package My::Package;
-    $VERSION = '0.1';
+    use strict;
+    use warnings;
+
+    our $VERSION = '0.1';
+
     1;
 
     __END__
