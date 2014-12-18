@@ -8,6 +8,7 @@ WriteMakefile(
     VERSION_FROM     => 'lib/Task/BeLike/FIBO.pm',
     AUTHOR           => 'G. Casati <fibo@cpan.org>',
     NAME             => 'Task::BeLike::FIBO',
+    LICENSE      => 'artistic_2',
     MIN_PERL_VERSION => '5.8.0',
     META_MERGE       => {
         resources => {
@@ -25,6 +26,9 @@ WriteMakefile(
         'Test::Compile'       => '1.2.1',
         'Test::More'          => '1.001009',
         'Test::Pod'           => '1.48'
+    },
+    BUILD_REQUIRES => {
+        'ExtUtils::MakeMaker' => '6.64'
     },
     test          => { TESTS => 't/*.t' },
     TEST_REQUIRES => {

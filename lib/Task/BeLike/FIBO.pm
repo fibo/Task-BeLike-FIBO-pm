@@ -163,18 +163,23 @@ Makefile.PL
         VERSION_FROM  => 'lib/My/Package.pm',
         AUTHOR        => 'G. Casati <fibo@cpan.org>',
         NAME          => 'My::Package',
+        LICENSE      => 'artistic_2',
         MIN_PERL_VERSION => '5.8.0',
         META_MERGE => {
             resources => {
-                homepage   => 'https://metacpan.org/pod/My::Package'
+                homepage   => 'https://metacpan.org/pod/My::Package',
                 license    => 'http://g14n.info/artistic-license',
                 repository => 'https://github.com/fibo/My-Package-pm',
-                bugtracker => 'https://github.com/fibo/My-Package-pm/issues',
+                bugtracker => 'https://github.com/fibo/My-Package-pm/issues'
             },
         },
         PREREQ_PM => {
             # 'Some::Package' => '0',
-            # 'Other::Package' => '1.2.3',
+            # 'Other::Package' => '1.2.3'
+        },
+        # EXE_FILES => ['bin/foo', 'bin/bar'],
+        BUILD_REQUIRES => {
+            'ExtUtils::MakeMaker' => '6.64'
         },
         test => { TESTS => 't/*.t' },
         TEST_REQUIRES => {
@@ -238,12 +243,20 @@ If some test does not pass, fix code and run tests that failed
 
 =item *
 
-Merge feature branch and commit work
+Commit changes
+
+    $ git commit -am 'added some feature'
+
+Merge feature branch and push
 
     $ git rebase master
     $ git checkout master
     $ git merge somefeature
     $ git push
+
+Delete feature branch
+
+    $ git branch -d somefeature
 
 =item *
 

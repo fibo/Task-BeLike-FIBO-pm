@@ -1,5 +1,7 @@
-201x-xx-xx v0.11
+2014-12-18 v0.11
++ Added badges
 + Added git tag instructions
++ Better git branch workflow
 
 2014-12-17 v0.10
 + Updated dependencies versions
