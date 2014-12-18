@@ -10,6 +10,12 @@ __END__
 
 Task::BeLike::FIBO -- Leonardo Pisano a.k.a. Fibonacci
 
+=begin HTML
+
+<p><a href="https://metacpan.org/pod/Task::BeLike::FIBO" target="_blank"><img alt="CPAN version" src="https://badge.fury.io/pl/Task-BeLike-FIBO.svg"></a> <a href="https://travis-ci.org/fibo/Task-BeLike-FIBO-pm" target="_blank"><img alt="Build Status" src="https://travis-ci.org/fibo/Task-BeLike-FIBO-pm.svg?branch=master"></a></p>
+
+=end HTML
+
 =head1 SYNOPSIS
 
     cpan Task::BeLike::FIBO
@@ -36,7 +42,11 @@ Learn from nature: stay as minimal as possible.
 
 Follows a list of sample files I usually include in a package, C<MY::Package> for instance.
 
-I use to create a GitHub repo named C<My-Package-pm>.
+I use to create a L<GitHub|https://github.com/> repo named C<My-Package-pm>.
+
+I also use L<Travis CI|https://travis-ci.org/>.
+
+And yes, L<Task::BeLike::FIBO> was created with these guidelines too! So it is a good example of a meta package ^:) I am a mathematician, I told you :D
 
 =over 4
 
@@ -58,9 +68,26 @@ This is the main file of the package and looks something like this
 
     My::Package -- is yet another Perl package
 
+    =begin HTML
+
+    <p><a href="https://metacpan.org/pod/My::Package" target="_blank"><img alt="CPAN version" src="https://badge.fury.io/pl/My-Package.svg"></a> <a href="https://travis-ci.org/fibo/My-Package-pm" target="_blank"><img alt="Build Status" src="https://travis-ci.org/fibo/My-Package-pm.svg?branch=master"></a></p>
+
+    =end HTML
+
     =head1 SYNOPSIS
 
+        package Your:Package;
+        use My::Package;
+
+        # Create a My::Package instance.
+        my $foo = My::Package->new;
+
+        # foo goes to a bar, ehm ... to have a coffee.
+        $foo->bar;
+
     =head1 DESCRIPTION
+
+    This is a description of what <My::Package> does, why you maybe want to use it, the motivations behind him.
 
     =head1 COPYRIGHT AND LICENSE
 
