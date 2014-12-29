@@ -2,7 +2,7 @@ package Task::BeLike::FIBO;
 use strict;
 use warnings;
 
-our $VERSION = '0.11';
+our $VERSION = '0.12';
 
 1;
 
@@ -191,9 +191,9 @@ Makefile.PL
         },
         test => { TESTS => 't/*.t' },
         TEST_REQUIRES => {
-            'Test::Compile' => '1.2.1',
-            'Test::More'    => '1.001009',
-            'Test::Pod'     => '1.48'
+            'Test::Compile'      => '1.2.1',
+            'Test::More'         => '1.001009',
+            'Test::Pod'          => '1.48'
         }
     );
 
@@ -328,6 +328,10 @@ L<CPAN::Uploader> to release modules using a cli. It also depends on L<LWP::Prot
 =item *
 
 L<ExtUtils::MakeMaker> version C<6.64>, cause I use the C<TEST_REQUIRES> option.
+
+=item *
+
+L<Module::CoreList>
 
 =item *
 
