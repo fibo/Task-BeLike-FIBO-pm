@@ -333,6 +333,8 @@ L<ExtUtils::MakeMaker> version C<6.64>, cause I use the C<TEST_REQUIRES> option.
 
 L<Module::CoreList>
 
+It is a core module since Perl C<v5.8.9>.
+
 =item *
 
 L<Perl::Tidy>
