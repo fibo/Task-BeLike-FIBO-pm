@@ -19,14 +19,16 @@ WriteMakefile(
         },
     },
     PREREQ_PM => {
-        'CPAN'                => '2.05',
-        'CPAN::Uploader'      => '0.103007',
-        'ExtUtils::MakeMaker' => '6.64',
-        'Module::CoreList'    => '5',
-        'Perl::Tidy'          => '20140328',
-        'Test::Compile'       => '1.2.1',
-        'Test::More'          => '1.001009',
-        'Test::Pod'           => '1.48'
+        'CPAN'                 => '2.05',
+        'CPAN::Uploader'       => '0.103007',
+        'ExtUtils::MakeMaker'  => '6.64',
+        'Module::CoreList'     => '5',
+        'Perl::Tidy'           => '20140328',
+        'Term::ReadKey'        => '2.32',
+        'Term::ReadLine::Perl' => '1.0303',
+        'Test::Compile'        => '1.2.1',
+        'Test::More'           => '1.001009',
+        'Test::Pod'            => '1.48'
     },
     BUILD_REQUIRES => {
         'ExtUtils::MakeMaker' => '6.64'

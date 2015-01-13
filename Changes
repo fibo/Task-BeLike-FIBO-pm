@@ -1,3 +1,6 @@
+2015-14-01 v0.14
++ Added modules to enable cpan client history
+
 2014-12-29 v0.12
 + Added Module::Corelist to bundle
 

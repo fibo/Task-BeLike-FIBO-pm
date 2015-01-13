@@ -2,7 +2,7 @@ package Task::BeLike::FIBO;
 use strict;
 use warnings;
 
-our $VERSION = '0.12';
+our $VERSION = '0.14';
 
 1;
 
@@ -375,7 +375,15 @@ Create a C<t/_pod.t> file
       if $@;
     all_pod_files_ok();
 
+=item *
+
+L<Term::ReadLine::Perl> and L<Term::ReadKey> to L<enable history|http://g14n.info/2014/03/a-cpan-client-that-works-like-charm/#enable-history> of L<cpan> client.
+
 =back
+
+=head1 MISCELLANEA
+
+Avoid to release versions like C<0.13> or even worse C<1.13> or any number that do not make you feel comfortable: skip it and go straight to C<0.14>! You never knows which strange entanglements there are in this Universe.
 
 =head1 COPYRIGHT AND LICENSE
 
