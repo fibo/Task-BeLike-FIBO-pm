@@ -1,8 +1,6 @@
 package Task::BeLike::FIBO;
-use strict;
-use warnings;
 
-our $VERSION = '0.14';
+our $VERSION = '0.15';
 
 1;
 
@@ -33,7 +31,10 @@ This is a primary about my habits and a collection of modules I use when I write
 
 =head1 PACKAGE GUIDELINES
 
+Here a C<package> refers to a distribution, a set of Perl modules which could be uploaded to L<PAUSE|http://pause.perl.org/>.
+
 Do not get crazy with automatic generators. I am a mathematician and a coder, not a corporation.
+
 Every package is different and has different needings.
 
 Just use copy and paste and your brain!
@@ -61,10 +62,8 @@ lib/My/Package.pm
 This is the main file of the package and looks something like this
 
     package My::Package;
-    use strict;
-    use warnings;
 
-    our $VERSION = '0.1';
+    our $VERSION = '0.01';
 
     1;
 
@@ -99,7 +98,7 @@ This is the main file of the package and looks something like this
 
     =head1 COPYRIGHT AND LICENSE
 
-    This software is copyright (c) 2014 by G. Casati.
+    This software is copyright (c) 2015 by L<G. Casati|http://g14n.info>.
 
     This is free software; you can redistribute it and/or modify it under the same terms as the Perl 5 programming language system itself.
 
@@ -127,6 +126,7 @@ README.md
     [![CPAN version](https://badge.fury.io/pl/My-Package.svg)](https://metacpan.org/pod/My::Package)
     [![Build Status](https://travis-ci.org/fibo/My-Package-pm.png?branch=master)](https://travis-ci.org/fibo/My-Package-pm)
 
+
 =item *
 
 .travis.yml
@@ -139,6 +139,11 @@ README.md
       - "5.12"
       - "5.10"
       - "5.8"
+
+Get it with this command
+
+    wget https://raw.githubusercontent.com/fibo/Task-BeLike-FIBO-pm/master/.travis.yml
+
 
 =item *
 
@@ -156,6 +161,11 @@ README.md
     !MANIFEST.SKIP
     *META.*
     *.tar.gz
+
+Get it with this command
+
+    wget https://raw.githubusercontent.com/fibo/Task-BeLike-FIBO-pm/master/.gitignore
+
 
 =item *
 
@@ -223,13 +233,17 @@ MANIFEST.SKIP
     ^blib
     ^pm_to_blib
 
+Get it with this command
+
+    wget https://raw.githubusercontent.com/fibo/Task-BeLike-FIBO-pm/master/MANIFEST.SKIP
+
 =item *
 
 Changes
 
 It is considered a good habit to keep track of at least major changes to inform users what they should expect when upgrading version.
 
-    2014-12-02 v0.1
+    2014-12-02 v0.01
     + First release
 
 =back
@@ -296,17 +310,17 @@ Create a new release
 
 Create a git tag
 
-    $ git tag v0.1
+    $ git tag v0.01
     $ git push
 
 =item *
 
 Upload to L<PAUSE|http://pause.perl.org/>
 
-    $ cpan-upload -u fibo My-Package-0.1.tar.gz
+    $ cpan-upload -u fibo My-Package-0.01.tar.gz
     PAUSE Password:
     registering upload with PAUSE web server
-    POSTing upload for My-Package-0.1.tar.gz to https://pause.perl.org/pause/authenquery
+    POSTing upload for My-Package-0.01.tar.gz to https://pause.perl.org/pause/authenquery
     PAUSE add message sent ok [200]
 
 =back
@@ -357,6 +371,10 @@ Create a C<t/_compile.t> file
       if $@;
     all_pm_files_ok();
 
+Get it with this command
+
+    mkdir -p t; wget https://raw.githubusercontent.com/fibo/Task-BeLike-FIBO-pm/master/t/_pod.t -O t/_pod.t
+
 =item *
 
 L<Test::More>
@@ -375,6 +393,10 @@ Create a C<t/_pod.t> file
       if $@;
     all_pod_files_ok();
 
+Get it with this command
+
+    mkdir -p t; wget https://raw.githubusercontent.com/fibo/Task-BeLike-FIBO-pm/master/t/_pod.t -O t/_pod.t
+
 =item *
 
 L<Term::ReadLine::Perl> and L<Term::ReadKey> to L<enable history|http://g14n.info/2014/03/a-cpan-client-that-works-like-charm/#enable-history> of L<cpan> client.
@@ -387,7 +409,7 @@ Avoid to release versions like C<0.13> or even worse C<1.13> or any number that 
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2014 by G. Casati.
+This software is copyright (c) 2015 by L<G. Casati|http://g14n.info>.
 
 This is free software; you can redistribute it and/or modify it under the same terms as the Perl 5 programming language system itself.
 
