@@ -1,3 +1,7 @@
+2015-0x-xx v0.16
++ Removed url schemes from links to g14n.info
++ Added perltidyrc config
+
 2015-02-03 v0.15
 + Added commands to download file samples
 

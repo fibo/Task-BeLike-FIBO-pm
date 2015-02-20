@@ -98,7 +98,7 @@ This is the main file of the package and looks something like this
 
     =head1 COPYRIGHT AND LICENSE
 
-    This software is copyright (c) 2015 by L<G. Casati|http://g14n.info>.
+    This software is copyright (c) 2015 by L<G. Casati|//g14n.info>.
 
     This is free software; you can redistribute it and/or modify it under the same terms as the Perl 5 programming language system itself.
 
@@ -186,7 +186,7 @@ Makefile.PL
         META_MERGE => {
             resources => {
                 homepage   => 'https://metacpan.org/pod/My::Package',
-                license    => 'http://g14n.info/artistic-license',
+                license    => '//g14n.info/artistic-license',
                 repository => 'https://github.com/fibo/My-Package-pm',
                 bugtracker => 'https://github.com/fibo/My-Package-pm/issues'
             },
@@ -333,7 +333,7 @@ Upload to L<PAUSE|http://pause.perl.org/>
 
 L<CPAN>
 
-See how to setup L<A CPAN client that works like a charm|http://g14n.info/2014/03/a-cpan-client-that-works-like-charm>.
+See how to setup L<A CPAN client that works like a charm|//g14n.info/2014/03/a-cpan-client-that-works-like-charm>.
 
 =item *
 
@@ -353,9 +353,13 @@ It is a core module since Perl C<v5.8.9>.
 
 L<Perl::Tidy>
 
-Use L<Perl::Tidy> defaults. Do not indent every source file automatically, indent by hand and use your creativity.
+Use L<Perl::Tidy> defaults; the only customization it is worth to set IMHO is
 
-See Perl section in L<My Vim preferences|http://g14n.info/2013/07/my-vim-configuration#perl> to see how you can use L<perltidy> with Vim.
+    echo l=0 > ~/.perltidyrc # set no maximum line length
+
+However, do not indent every source file automatically. Indent by hand and use your creativity.
+
+See Perl section in L<My Vim preferences|//g14n.info/2013/07/my-vim-configuration#perl> to see how you can use L<perltidy> with Vim.
 
 =item *
 
@@ -399,7 +403,7 @@ Get it with this command
 
 =item *
 
-L<Term::ReadLine::Perl> and L<Term::ReadKey> to L<enable history|http://g14n.info/2014/03/a-cpan-client-that-works-like-charm/#enable-history> of L<cpan> client.
+L<Term::ReadLine::Perl> and L<Term::ReadKey> to L<enable history|//g14n.info/2014/03/a-cpan-client-that-works-like-charm/#enable-history> of L<cpan> client.
 
 =back
 
@@ -409,7 +413,7 @@ Avoid to release versions like C<0.13> or even worse C<1.13> or any number that 
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2015 by L<G. Casati|http://g14n.info>.
+This software is copyright (c) 2015 by L<G. Casati|//g14n.info>.
 
 This is free software; you can redistribute it and/or modify it under the same terms as the Perl 5 programming language system itself.
 
