@@ -23,7 +23,7 @@ WriteMakefile(
         'CPAN::Uploader'       => '0.103007',
         'ExtUtils::MakeMaker'  => '6.64',
         'Module::CoreList'     => '5',
-        'Perl::Tidy'           => '20140328',
+        'Perl::Tidy'           => '20140711',
         'Term::ReadKey'        => '2.32',
         'Term::ReadLine::Perl' => '1.0303',
         'Test::Compile'        => '1.2.1',
