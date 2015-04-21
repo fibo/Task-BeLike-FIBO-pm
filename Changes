@@ -1,6 +1,7 @@
-2015-0x-xx v0.16
-+ Removed url schemes from links to g14n.info
+2015-04-21 v0.16
++ Updated travis
 + Added perltidyrc config
++ Minor modifications in documentation
 
 2015-02-03 v0.15
 + Added commands to download file samples
