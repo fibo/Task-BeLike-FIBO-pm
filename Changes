@@ -1,6 +1,7 @@
-2015-0x-xx v0.17
+2015-04-24 v0.17
 + Added test coverage instructions
 + Added how to use GitHub Pages
++ Replaced urls on raw.githubusercontent.com with my own domain g14n.info
 
 2015-04-21 v0.16
 + Updated travis to Perl v5.20

@@ -126,47 +126,24 @@ README.md
     [![CPAN version](https://badge.fury.io/pl/My-Package.svg)](https://metacpan.org/pod/My::Package)
     [![Build Status](https://travis-ci.org/fibo/My-Package-pm.png?branch=master)](https://travis-ci.org/fibo/My-Package-pm)
 
+Yes, it is always a good idea to add a README. If the package is not open sourced, i.e. will be delivered to a customer on premise and will not be hosted on GitHub, create a README.txt instead.
 
 =item *
 
 .travis.yml
 
-    language: perl
-    perl:
-      - "5.20"
-      - "5.18"
-      - "5.16"
-      - "5.14"
-      - "5.12"
-      - "5.10"
-      - "5.8"
-
 Get it with this command
 
-    wget https://raw.githubusercontent.com/fibo/Task-BeLike-FIBO-pm/master/.travis.yml
+    $ wget http://g14n.info/Task-BeLike-FIBO-pm/.travis.yml
 
 
 =item *
 
 .gitignore
 
-    .*
-    *~
-    !.gitignore
-    !.travis.yml
-    blib
-    pm_to_blib
-    Makefile*
-    !Makefile.PL
-    MANIFEST*
-    !MANIFEST.SKIP
-    *META.*
-    *.tar.gz
-    cover_db
-
 Get it with this command
 
-    wget https://raw.githubusercontent.com/fibo/Task-BeLike-FIBO-pm/master/.gitignore
+    $ wget http://g14n.info/Task-BeLike-FIBO-pm/_gitignore
 
 =item *
 
@@ -223,21 +200,9 @@ so I know I should go for C<1.05>.
 
 MANIFEST.SKIP
 
-    ^MANIFEST\.SKIP$
-    ^MANIFEST\.bak$
-    ^\.
-    .*\.old$
-    .*\.bak$
-    \.tar\.gz$
-    ^Makefile$
-    ^MYMETA\.
-    ^blib
-    ^pm_to_blib
-    ^gh-pages
-
 Get it with this command
 
-    wget https://raw.githubusercontent.com/fibo/Task-BeLike-FIBO-pm/master/MANIFEST.SKIP
+    $ wget http://g14n.info/Task-BeLike-FIBO-pm/MANIFEST.SKIP
 
 =item *
 
@@ -361,7 +326,7 @@ L<Perl::Tidy>
 
 Use L<Perl::Tidy> defaults; the only customization it is worth to set IMHO is
 
-    echo l=80 > ~/.perltidyrc # increase maximum line length
+    $ echo l=80 > ~/.perltidyrc # increase maximum line length
 
 However, do not indent every source file automatically. Indent by hand and use your creativity.
 
@@ -373,17 +338,7 @@ L<Test::Compile>
 
 Create a C<t/_compile.t> file
 
-    use strict;
-    use warnings;
-    use Test::More;
-    eval "use Test::Compile";
-    plan skip_all => "Test::Compile required for testing compilation"
-      if $@;
-    all_pm_files_ok();
-
-Get it with this command
-
-    mkdir -p t; wget https://raw.githubusercontent.com/fibo/Task-BeLike-FIBO-pm/master/t/_pod.t -O t/_pod.t
+    $ mkdir -p t; wget http://g14n.info/Task-BeLike-FIBO-pm/t/_compile.t -O t/_compile.t
 
 =item *
 
@@ -395,17 +350,7 @@ L<Test::Pod>
 
 Create a C<t/_pod.t> file
 
-    use strict;
-    use warnings;
-    use Test::More;
-    eval "use Test::Pod";
-    plan skip_all => "Test::Pod required for testing POD"
-      if $@;
-    all_pod_files_ok();
-
-Get it with this command
-
-    mkdir -p t; wget https://raw.githubusercontent.com/fibo/Task-BeLike-FIBO-pm/master/t/_pod.t -O t/_pod.t
+    $ mkdir -p t; wget http://g14n.info/Task-BeLike-FIBO-pm/t/_pod.t -O t/_pod.t
 
 =item *
 
@@ -463,7 +408,7 @@ Avoid to release versions like C<0.13> or even worse C<1.13> or any number that 
 
 =head1 CODE COVERAGE
 
-Code coverage metrics report available L<here|http://g14n.info/Task-BeLike-FIBO-pm/code/coverage.html>
+Code coverage metrics report available L<here|http://g14n.info/Task-BeLike-FIBO-pm/code/coverage.html>. By the way, tests in this C<meta> package are not relevant.
 
 =head1 COPYRIGHT AND LICENSE
 
