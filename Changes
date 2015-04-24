@@ -1,5 +1,9 @@
+2015-0x-xx v0.17
++ Added test coverage instructions
++ Added how to use GitHub Pages
+
 2015-04-21 v0.16
-+ Updated travis
++ Updated travis to Perl v5.20
 + Added perltidyrc config
 + Minor modifications in documentation
 

@@ -21,6 +21,7 @@ WriteMakefile(
     PREREQ_PM => {
         'CPAN'                 => '2.05',
         'CPAN::Uploader'       => '0.103007',
+        'Devel::Cover'         => '1.18',
         'ExtUtils::MakeMaker'  => '6.64',
         'Module::CoreList'     => '5',
         'Perl::Tidy'           => '20140711',

@@ -98,7 +98,7 @@ This is the main file of the package and looks something like this
 
     =head1 COPYRIGHT AND LICENSE
 
-    This software is copyright © 2015 by L<G. Casati|//g14n.info>.
+    This software is copyright © 2015 by L<G. Casati|http://g14n.info>.
 
     This is free software; you can redistribute it and/or modify it under the same terms as the Perl 5 programming language system itself.
 
@@ -162,11 +162,11 @@ Get it with this command
     !MANIFEST.SKIP
     *META.*
     *.tar.gz
+    cover_db
 
 Get it with this command
 
     wget https://raw.githubusercontent.com/fibo/Task-BeLike-FIBO-pm/master/.gitignore
-
 
 =item *
 
@@ -187,7 +187,7 @@ Makefile.PL
         META_MERGE => {
             resources => {
                 homepage   => 'https://metacpan.org/pod/My::Package',
-                license    => '//g14n.info/artistic-license',
+                license    => 'http://g14n.info/artistic-license',
                 repository => 'https://github.com/fibo/My-Package-pm',
                 bugtracker => 'https://github.com/fibo/My-Package-pm/issues'
             },
@@ -233,6 +233,7 @@ MANIFEST.SKIP
     ^MYMETA\.
     ^blib
     ^pm_to_blib
+    ^gh-pages
 
 Get it with this command
 
@@ -334,11 +335,15 @@ Upload to L<PAUSE|http://pause.perl.org/>
 
 L<CPAN>
 
-See how to setup L<A CPAN client that works like a charm|//g14n.info/2014/03/a-cpan-client-that-works-like-charm>.
+See how to setup L<A CPAN client that works like a charm|http://g14n.info/2014/03/a-cpan-client-that-works-like-charm>.
 
 =item *
 
 L<CPAN::Uploader> to release modules using a cli. It also depends on L<LWP::Protocol::https> which depends on L<IO::Socket::SSL> which I think L<should be a core module|http://blogs.perl.org/users/chris_fedde/2013/03/how-do-we-know-when-a-module-is-depricated.html#comment-1460139>.
+
+=item *
+
+L<Devel::Cover> to add code coverage metrics.
 
 =item *
 
@@ -356,7 +361,7 @@ L<Perl::Tidy>
 
 Use L<Perl::Tidy> defaults; the only customization it is worth to set IMHO is
 
-    echo l=0 > ~/.perltidyrc # set no maximum line length
+    echo l=80 > ~/.perltidyrc # increase maximum line length
 
 However, do not indent every source file automatically. Indent by hand and use your creativity.
 
@@ -410,7 +415,55 @@ L<Term::ReadLine::Perl> and L<Term::ReadKey> to L<enable history|http://g14n.inf
 
 =head1 MISCELLANEA
 
+=head2 GITHUB PAGES
+
+It can be useful to put some content online, and L<GitHub Pages|https://pages.github.com/> is really comfortable.
+
+Just create a gh-pages folder
+
+    $ mkdir gh-pages
+
+Add some content, commit and then push it on C<gh-pages> branchusing C<git subtree>
+
+    $ git commit -a
+    $ git subtree --prefix gh-pages push origin gh-pages
+
+Since I have a C<CNAME> file in my L<fibo.github.io|https://github.com/fibo/fibo.github.io> repo, where C<fibo> is my GitHub username, if I add C<somefile> to C<gh-pages> folder
+
+    $ touch gh-pages/somefile
+
+if my repo name is C<My-Package-pm>, it will be served on url C<http://g14n.info/My-Package-pm/somefile> with proper mime type.
+
+=head2 CODE COVERAGE
+
+Create a folder that will contain code coverage metrics report
+
+    $ mkdir -p gh-pages/code
+
+Run tests with a L<Devel::Cover> harness, it will take more time than running bare tests
+
+    $ export HARNESS_PERL_SWITCHES=-MDevel::Cover
+    $ prove -l
+
+Generate html report
+
+    $ cover -outputdir gh-pages/code
+
+See also L<GitHub Pages|#github-pages> section for instructions about how to commit.
+
+Don't forget to add a link to the html report somewhere in your documentation, something like
+
+    =head1 CODE COVERAGE
+
+    Code coverage metrics report available L<here|http://g14n.info/My-Package-pm/code/coverage.html>
+
+=head2 VERSION NUMBERS IDIOSYNCRASY
+
 Avoid to release versions like C<0.13> or even worse C<1.13> or any number that do not make you feel comfortable: skip it and go straight to C<0.14>! You never knows which strange entanglements there are in this Universe.
+
+=head1 CODE COVERAGE
+
+Code coverage metrics report available L<here|http://g14n.info/Task-BeLike-FIBO-pm/code/coverage.html>
 
 =head1 COPYRIGHT AND LICENSE
 
