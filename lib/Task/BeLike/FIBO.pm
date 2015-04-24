@@ -143,7 +143,7 @@ Get it with this command
 
 Get it with this command
 
-    $ wget http://g14n.info/Task-BeLike-FIBO-pm/_gitignore
+    $ wget http://g14n.info/Task-BeLike-FIBO-pm/_gitignore .gitignore
 
 =item *
 
