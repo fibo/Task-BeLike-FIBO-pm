@@ -134,7 +134,7 @@ Yes, it is always a good idea to add a README. If the package is not open source
 
 Get it with this command
 
-    $ wget http://g14n.info/Task-BeLike-FIBO-pm/.travis.yml
+    $ wget http://g14n.info/Task-BeLike-FIBO-pm/dottravis.yml -O .travis.yml
 
 
 =item *
@@ -143,7 +143,7 @@ Get it with this command
 
 Get it with this command
 
-    $ wget http://g14n.info/Task-BeLike-FIBO-pm/_gitignore .gitignore
+    $ wget http://g14n.info/Task-BeLike-FIBO-pm/dotgitignore -O .gitignore
 
 =item *
 
