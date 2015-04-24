@@ -385,6 +385,10 @@ Create a folder that will contain code coverage metrics report
 
     $ mkdir -p gh-pages/code
 
+Install L<Devel::Cover>
+
+    $ cpan Devel::Cover
+
 Run tests with a L<Devel::Cover> harness, it will take more time than running bare tests
 
     $ export HARNESS_PERL_SWITCHES=-MDevel::Cover
@@ -394,7 +398,11 @@ Generate html report
 
     $ cover -outputdir gh-pages/code
 
-See also L<GitHub Pages|#github-pages> section for instructions about how to commit.
+Remove harness flag, otherwise all tests in your current session will run and compute coverage.
+
+    $ unset HARNESS_PERL_SWITCHES
+
+See also L<GitHub Pages|#GITHUB-PAGES> section for instructions about how to commit.
 
 Don't forget to add a link to the html report somewhere in your documentation, something like
 
