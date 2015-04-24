@@ -266,6 +266,10 @@ Use L<Semantic Versioning|http://semver.org/>.
 
 Check that C<Changes> file is updated with modifications.
 
+Update code coverage report if it is in place, see L<CODE COVERAGE|#CODE-COVERAGE> section.
+
+Update GitHub Pages if used, see L<GITHUB PAGES|#GITHUB-PAGES> section.
+
 Create a new release
 
     $ perl Makefile.PL
