@@ -389,10 +389,6 @@ Create a folder that will contain code coverage metrics report
 
     $ mkdir -p gh-pages/code
 
-Install L<Devel::Cover>
-
-    $ cpan Devel::Cover
-
 Run tests with a L<Devel::Cover> harness, it will take more time than running bare tests
 
     $ export HARNESS_PERL_SWITCHES=-MDevel::Cover
