@@ -1,7 +1,7 @@
 Task::BeLike::FIBO
 ==================
 
-This is a primary about my habits and a collection of modules I use when I write Perl code.
+This is a summary about my habits and a collection of modules I use when I write Perl code.
 
 To install, pray the mantra
 

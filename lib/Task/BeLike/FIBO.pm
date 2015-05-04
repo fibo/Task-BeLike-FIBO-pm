@@ -20,8 +20,16 @@ Task::BeLike::FIBO -- Leonardo Pisano a.k.a. Fibonacci
 
 =head1 SYNOPSIS
 
+Read how I create Perl packages
+
     cpan Task::BeLike::FIBO
     perldoc Task::BeLike::FIBO
+
+Create a CPAN package
+
+    mkdir My-Package-pm
+    cd My-Package-pm
+    wget -q http://g14n.info/Task-BeLike-FIBO-pm/scaffolding | bash
 
 =head1 DESCRIPTION
 
@@ -134,8 +142,7 @@ Yes, it is always a good idea to add a README. If the package is not open source
 
 Get it with this command
 
-    $ wget http://g14n.info/Task-BeLike-FIBO-pm/dottravis.yml -O .travis.yml
-
+    $ wget http://g14n.info/Task-BeLike-FIBO-pm/travis.yml -O .travis.yml
 
 =item *
 
@@ -143,7 +150,7 @@ Get it with this command
 
 Get it with this command
 
-    $ wget http://g14n.info/Task-BeLike-FIBO-pm/dotgitignore -O .gitignore
+    $ wget http://g14n.info/Task-BeLike-FIBO-pm/gitignore -O .gitignore
 
 =item *
 
@@ -328,9 +335,9 @@ It is a core module since Perl C<v5.8.9>.
 
 L<Perl::Tidy>
 
-Use L<Perl::Tidy> defaults; the only customization it is worth to set IMHO is
+Get a C<.perltidyrc> file
 
-    $ echo l=80 > ~/.perltidyrc # increase maximum line length
+    $ wget http://g14n.info/Task-BeLike-FIBO-pm/perltidyrc -O .perltidyrc
 
 However, do not indent every source file automatically. Indent by hand and use your creativity.
 

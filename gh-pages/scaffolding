@@ -1,0 +1,7 @@
+wget http://g14n.info/Task-BeLike-FIBO-pm/travis.yml -O .travis.yml
+wget http://g14n.info/Task-BeLike-FIBO-pm/gitignore -O .gitignore
+wget http://g14n.info/Task-BeLike-FIBO-pm/MANIFEST.SKIP
+wget http://g14n.info/Task-BeLike-FIBO-pm/perltidyrc -O .perltidyrc
+mkdir -p t; wget http://g14n.info/Task-BeLike-FIBO-pm/t/_compile.t -O t/_compile.t
+mkdir -p t; wget http://g14n.info/Task-BeLike-FIBO-pm/t/_pod.t -O t/_pod.t
+

@@ -1,0 +1,7 @@
+-mbl=2             # No more than 2 blank lines
+-i=4               # Indentation is 4 columns
+-ci=2              # Continuation indentation is 2 columns
+-vmll              # --variable-maximum-line-length
+-pt=2              # High parenthesis tightness
+-bt=2              # High brace tightness
+--noadd-semicolons
