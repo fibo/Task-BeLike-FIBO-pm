@@ -345,6 +345,12 @@ See Perl section in L<My Vim preferences|http://g14n.info/2013/07/my-vim-configu
 
 =item *
 
+L<PPI::HTML>
+
+Used to generate code coverage reports with highlighted syntax.
+
+=item *
+
 L<Test::Compile>
 
 Create a C<t/_compile.t> file
@@ -401,15 +407,15 @@ Run tests with a L<Devel::Cover> harness, it will take more time than running ba
     $ export HARNESS_PERL_SWITCHES=-MDevel::Cover
     $ prove -l
 
-Generate html report
-
-    $ cover -outputdir gh-pages/code
-
 Remove harness flag, otherwise all tests in your current session will run and compute coverage.
 
     $ unset HARNESS_PERL_SWITCHES
 
-See also L<GitHub Pages|#GITHUB-PAGES> section for instructions about how to commit.
+Generate html report
+
+    $ cover -outputdir gh-pages/code -report html_basic
+
+See also L<GitHub Pages|#GITHUB-PAGES> section for instructions about how to commit generated html report.
 
 Don't forget to add a link to the html report somewhere in your documentation, something like
 
