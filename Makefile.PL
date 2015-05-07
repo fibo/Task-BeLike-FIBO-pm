@@ -19,7 +19,8 @@ WriteMakefile(
         },
     },
     PREREQ_PM => {
-        'CPAN'                 => '2.05',
+        'App::Ack'             => '2.14',
+        'CPAN'                 => '2.10',
         'CPAN::Uploader'       => '0.103007',
         'Devel::Cover'         => '1.18',
         'ExtUtils::MakeMaker'  => '6.64',

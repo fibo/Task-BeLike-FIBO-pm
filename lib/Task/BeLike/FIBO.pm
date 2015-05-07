@@ -309,6 +309,12 @@ Upload to L<PAUSE|http://pause.perl.org/>
 
 =item *
 
+L<App::Ack>
+
+Yes, I was hooked by L<ack>. See also L<ack.vim|https://github.com/mileszs/ack.vim> and L<ack-tutorial|https://github.com/djanowski/ack-tutorial>.
+
+=item *
+
 L<CPAN>
 
 See how to setup L<A CPAN client that works like a charm|http://g14n.info/2014/03/a-cpan-client-that-works-like-charm>.
