@@ -1,6 +1,6 @@
 package Task::BeLike::FIBO;
 
-our $VERSION = '0.17';
+our $VERSION = '0.18';
 
 1;
 
@@ -217,7 +217,7 @@ Changes
 
 It is considered a good habit to keep track of at least major changes to inform users what they should expect when upgrading version.
 
-    2014-12-02 v0.01
+    0.01 2014-12-02
     + First release
 
 =back
