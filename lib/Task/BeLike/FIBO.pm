@@ -29,7 +29,7 @@ Create a CPAN package
 
     mkdir My-Package-pm
     cd My-Package-pm
-    wget -q http://g14n.info/Task-BeLike-FIBO-pm/scaffolding | bash
+    wget -q http://g14n.info/Task-BeLike-FIBO-pm/scaffolding -O - | bash
 
 =head1 DESCRIPTION
 
@@ -361,7 +361,7 @@ L<Test::Compile>
 
 Create a C<t/_compile.t> file
 
-    $ mkdir -p t; wget http://g14n.info/Task-BeLike-FIBO-pm/t/_compile.t -O t/_compile.t
+    $ mkdir -p t; wget http://g14n.info/Task-BeLike-FIBO-pm/t/compile.t -O t/_compile.t
 
 =item *
 
@@ -373,7 +373,7 @@ L<Test::Pod>
 
 Create a C<t/_pod.t> file
 
-    $ mkdir -p t; wget http://g14n.info/Task-BeLike-FIBO-pm/t/_pod.t -O t/_pod.t
+    $ mkdir -p t; wget http://g14n.info/Task-BeLike-FIBO-pm/t/pod.t -O t/_pod.t
 
 =item *
 
