@@ -31,7 +31,8 @@ WriteMakefile(
         'Term::ReadLine::Perl' => '1.0303',
         'Test::Compile'        => '1.2.1',
         'Test::More'           => '1.001009',
-        'Test::Pod'            => '1.48'
+        'Test::Pod'            => '1.48',
+        'V'                    => '0.13'
     },
     BUILD_REQUIRES => {
         'ExtUtils::MakeMaker' => '6.64'

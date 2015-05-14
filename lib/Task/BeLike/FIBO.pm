@@ -377,7 +377,15 @@ Create a C<t/_pod.t> file
 
 =item *
 
-L<Term::ReadLine::Perl> and L<Term::ReadKey> to L<enable history|http://g14n.info/2014/03/a-cpan-client-that-works-like-charm/#enable-history> of L<cpan> client.
+L<Term::ReadLine::Perl> and L<Term::ReadKey> to L<enable cpan history|http://g14n.info/2014/03/a-cpan-client-that-works-like-charm/#enable-history> of L<cpan> client.
+
+=item *
+
+L<V>
+
+I find it very comfortable to know a package C<Foo> version with
+
+    $ perl -MV=Foo
 
 =back
 
