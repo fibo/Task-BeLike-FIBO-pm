@@ -13,5 +13,5 @@ PACKAGE_LIBDIR=$(echo lib/$PROJECT_DIR|perl -ple 's/-pm$//; s!-!/!g')
 
 mkdir -p $PACKAGE_LIBDIR
 wget http://g14n.info/Task-BeLike-FIBO-pm/Makefile.PL
-wget http://g14n.info/Task-BeLike-FIBO-pm/lib/My/Package.pm -O lib/$PACKAGE_PATH
+wget http://g14n.info/Task-BeLike-FIBO-pm/lib/My/Package -O lib/$PACKAGE_PATH
 # TODO replace Makefile.PL and lib/$PACKAGE_PATH
