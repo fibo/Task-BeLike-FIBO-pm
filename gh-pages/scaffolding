@@ -5,7 +5,13 @@ wget http://g14n.info/Task-BeLike-FIBO-pm/gitignore     -O .gitignore
 wget http://g14n.info/Task-BeLike-FIBO-pm/perltidyrc    -O .perltidyrc
 wget http://g14n.info/Task-BeLike-FIBO-pm/t/compile.t   -O t/_compile.t
 wget http://g14n.info/Task-BeLike-FIBO-pm/t/pod.t       -O t/_pod.t
-# TODO PROJECT_NAME=basename $PWD
-# get also PACKAGE_NAME, that is PROJECT_NAME splitted on - and joined with ::
-#
-# retrieve Makefile.PL and substitute $PROJECT_NAME, create lib/My/Package.pm
+
+PROJECT_DIR=$(basename $PWD)
+PACKAGE_NAME=$(  echo $PROJECT_DIR    |perl -ple 's/-pm$//; s/-/::/g')
+PACKAGE_PATH=$(  echo $PROJECT_DIR    |perl -ple 's/-pm$/\.pm/; s!-!/!g')
+PACKAGE_LIBDIR=$(echo lib/$PROJECT_DIR|perl -ple 's/-pm$//; s!-!/!g')
+
+mkdir -p lib/$PACKAGE_LIBDIR
+wget http://g14n.info/Task-BeLike-FIBO-pm/Makefile.PL
+wget http://g14n.info/Task-BeLike-FIBO-pm/lib/My/Package.pm -O lib/$PACKAGE_PATH
+# TODO replace Makefile.PL and lib/$PACKAGE_PATH
