@@ -1,6 +1,7 @@
 
 0.19 2015-xx-xx
 + Exclude *.ERR files form dist, e.g. perltidy.ERR
++ Few improvements in documentation
 
 0.18 2015-05-14
 + Changed Changes format
