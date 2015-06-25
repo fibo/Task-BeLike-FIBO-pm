@@ -271,11 +271,11 @@ Update version, usually in file C<lib/My/Package.pm>.
 
 Use L<Semantic Versioning|http://semver.org/>.
 
-Check that C<Changes> file is updated with modifications.
+Check that C<Changes> file is updated with information about modifications done.
 
-Update code coverage report if it is in place, see L<CODE COVERAGE|#CODE-COVERAGE> section.
+Update code coverage report if it is in place, see L<CODE COVERAGE/#CODE-COVERAGE> section.
 
-Update GitHub Pages if used, see L<GITHUB PAGES|#GITHUB-PAGES> section.
+Update GitHub Pages if used, see L<GITHUB PAGES/#GITHUB-PAGES> section.
 
 Create a new release
 
@@ -408,7 +408,7 @@ Since I have a C<CNAME> file in my L<fibo.github.io|https://github.com/fibo/fibo
 
     $ touch gh-pages/somefile
 
-if my repo name is C<My-Package-pm>, it will be served on url C<http://g14n.info/My-Package-pm/somefile> with proper mime type.
+if my repo name is C<My-Package-pm>, it will be served with url C<http://g14n.info/My-Package-pm/somefile> with proper mime type.
 
 =head2 CODE COVERAGE
 
