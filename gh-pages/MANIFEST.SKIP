@@ -1,6 +1,7 @@
 ^MANIFEST\.SKIP$
 ^MANIFEST\.bak$
 ^\.
+.*\.ERR$
 .*\.old$
 .*\.bak$
 \.tar\.gz$
