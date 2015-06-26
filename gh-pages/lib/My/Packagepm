@@ -2,8 +2,23 @@ package My::Package;
 
 our $VERSION = '0.01';
 
+# TODO: Update the abstract in this file, and delete this comment.
+#
+#    =head1 NAME
+#
+#    My::Package -- this is the abstract
+#
+# Also add something similar in the README.md
+#
+#    # My::Package
+#
+#    > this is the abstract
+#
+
 1;
 __END__
+
+=encoding utf8
 
 =head1 NAME
 

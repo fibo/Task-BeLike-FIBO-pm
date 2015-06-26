@@ -10,4 +10,5 @@ MANIFEST*
 !MANIFEST.SKIP
 *META.*
 *.tar.gz
+*.ERR
 cover_db
