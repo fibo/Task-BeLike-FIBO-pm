@@ -167,7 +167,7 @@ Makefile.PL
         AUTHOR        => 'G. Casati <fibo@cpan.org>',
         NAME          => 'My::Package',
         LICENSE      => 'artistic_2',
-        MIN_PERL_VERSION => '5.8.0',
+        MIN_PERL_VERSION => '5.12.0',
         META_MERGE => {
             resources => {
                 homepage   => 'https://metacpan.org/pod/My::Package',
@@ -202,6 +202,9 @@ For example if I want to figure out which version of L<File::Path> I should requ
       v5.8.0     1.05
 
 so I know I should go for C<1.05>.
+
+Note that C<MIN_PERL_VERSION> defaults to C<5.12.0>, which is the first modern Perl release, you know. See also L<Perl 5.12 for Everyday Use|http://www.slideshare.net/rjbs/perl-512-for-everyday-use>.
+Anyway, I admire a lot the veterans that dig into ancient versions of Perl and support them in their packages.
 
 =item *
 

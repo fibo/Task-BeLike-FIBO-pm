@@ -1,5 +1,7 @@
 
 0.19 2015-xx-xx
++ Updated travis to Perl v5.22
++ I prefer MINOR_PERL_VERSION 5.12.0
 + Exclude *.ERR files form dist, e.g. perltidy.ERR
 + Few improvements in documentation
 
