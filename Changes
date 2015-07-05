@@ -1,5 +1,6 @@
 
-0.19 2015-0x-xx
+0.19 2015-07-05
++ Install Devel::Cover only if Perl < 5.22
 + scaffonding script replaces files in place
 + Updated travis to Perl v5.22
 + I prefer MINOR_PERL_VERSION 5.12.0

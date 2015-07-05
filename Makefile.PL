@@ -3,7 +3,7 @@ use warnings;
 
 use ExtUtils::MakeMaker 6.64;
 
-WriteMakefile(
+my $meta = {
     ABSTRACT_FROM    => 'lib/Task/BeLike/FIBO.pm',
     VERSION_FROM     => 'lib/Task/BeLike/FIBO.pm',
     AUTHOR           => 'G. Casati <fibo@cpan.org>',
@@ -22,7 +22,6 @@ WriteMakefile(
         'App::Ack'             => '2.14',
         'CPAN'                 => '2.10',
         'CPAN::Uploader'       => '0.103007',
-        'Devel::Cover'         => '1.18',
         'ExtUtils::MakeMaker'  => '6.64',
         'Module::CoreList'     => '5',
         'Perl::Tidy'           => '20140711',
@@ -43,5 +42,9 @@ WriteMakefile(
         'Test::More'         => '1.001009',
         'Test::Pod'          => '1.48'
     }
-);
+  };
+
+if ( $^V lt 'v5.22.0' ) { $meta->{PREREQ_PM}->{'Devel::Cover'} = '1.18' };
+
+WriteMakefile(%$meta);
 

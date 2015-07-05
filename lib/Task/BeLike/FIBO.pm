@@ -1,6 +1,6 @@
 package Task::BeLike::FIBO;
 
-our $VERSION = '0.18';
+our $VERSION = '0.19';
 
 1;
 
@@ -328,7 +328,7 @@ L<CPAN::Uploader> to release modules using a cli. It also depends on L<LWP::Prot
 
 =item *
 
-L<Devel::Cover> to add code coverage metrics.
+L<Devel::Cover> to add code coverage metrics. It is installed only for Perl E<lt>C<v5.22> otherwise, at the time of this writing (2015-07-05) it will fail installation.
 
 =item *
 
