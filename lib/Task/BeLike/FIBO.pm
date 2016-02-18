@@ -192,6 +192,15 @@ Makefile.PL
         }
     );
 
+If you need to bundle an executable with your package, create a C<bin/> foler,
+comment out end edit the row
+
+        # EXE_FILES => ['bin/foo', 'bin/bar'],
+
+Start your C<bin/foo> script with a shebang like
+
+    #!perl
+
 A note about versions in C<PREREQ_PM>: keep in mind that when specifying a version for core modules, it should match the version shipped with Perl version C<MIN_PERL_VERSION>.
 
 The L<corelist> app is your friend.
